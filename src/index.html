@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1, maximun-scale=1, user-scalable=no">
+    <title>俄罗斯方块</title>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+   <![endif]-->
+</head>
+
+<body>
+    <!--开始界面-->
+    <div class="start-container">
+        <button type="button" class="start">开始游戏</button>
+        <button type="button" class="setter">设置中心</button>
+    </div>
+
+    <!--主容器-->
+    <div class="container">
+        <!--左边面板-->
+        <div class="left-panel">
+            <!--使用时间-->
+            <div class="timer-panel">
+                <h4 class="panel-header">时&nbsp;&nbsp;&nbsp;&nbsp;间</h4>
+                <div class="panel-body">
+                    <canvas id="timer-canvas" width="100" height="70">00:00:00</canvas>
+                </div>
+            </div>
+
+            <!--帮助-->
+            <div class="helper-panel">
+                <h4 class="panel-header">帮&nbsp;&nbsp;&nbsp;&nbsp;助</h4>
+                <div class="panel-body">
+                    <p>&uarr;&nbsp;翻转方块</p>
+                    <p>&darr;&nbsp;加速下落</p>
+                    <p>&larr;&nbsp;向左移动</p>
+                    <p>&rarr;&nbsp;向右移动</p>
+                </div>
+            </div>
+
+            <!--当前级别-->
+            <div class="level-panel">
+                <h4 class="panel-header">当前级别</h4>
+                <div class="panel-body">
+                    <canvas id="level-canvas">Level&nbsp;1</canvas>
+                </div>
+            </div>
+        </div>
+
+        <!--中间主要内容面板-->
+        <div class="main-panel">
+            <canvas id="game-canvas">你的浏览器不支持Canvas，请更新浏览器或选择其他浏览器.</canvas>
+        </div>
+
+        <!--右边面板-->
+        <div class="right-panel">
+            <!--下一方块-->
+            <div class="next-panel">
+                <h4 class="panel-header">下一方块</h4>
+                <div class="panel-body">
+                    <canvas id="next-canvas"></canvas>
+                </div>
+            </div>
+
+            <!--设置-->
+            <div class="setting-panel">
+                <h4 class="panel-header">设&nbsp;&nbsp;&nbsp;&nbsp;置</h4>
+                <div class="panel-body">
+                    <button type="button" class="pause">暂停</button>
+                    <br>
+                    <button type="button" class="set">设置</button>
+                </div>
+            </div>
+
+            <!--最高得分-->
+            <div class="high-score-panel">
+                <h4 class="panel-header">最高得分</h4>
+                <div class="panel-body">
+                    <canvas id="high-canvas">0</canvas>
+                </div>
+            </div>
+
+            <!--当前得分-->
+            <div class="score-panel">
+                <h4 class="panel-header">当前得分</h4>
+                <div class="panel-body">
+                    <canvas id="score-canvas" width="100" height="70">0</canvas>
+                </div>
+            </div>
+        </div>
+    </div><!--/container-->
+
+    <div class="modal-dialog">
+        <div class="modal-body">
+            <label for="cb-sound"><input type="checkbox" id="cb-sound" checked> 开启声音</label>
+            <br><br>
+            <button type="button" id="btn-modal-close">关闭</button>
+        </div>
+    </div>
+
+
+
+    <!--Insert into js-->
+    <script src="./js/config.js"></script>
+    <script src="./vendor/howler.min.js"></script>
+    <script src="./js/res-manager.js"></script>
+    <script src="./js/canvas.js"></script>
+    <script src="./js/chunk.js"></script>
+    <script src="./js/shape.js"></script>
+    <script src="./js/timer.js"></script>
+    <script src="./js/score.js"></script>
+    <script src="./js/level.js"></script>
+    <script src="./js/next-shape.js "></script>
+    <script src="./js/high-score.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/helper-dom-op.js"></script>
+    <script src="./js/keyboard.js"></script>
+    <script src="./js/tetris.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
